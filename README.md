@@ -64,6 +64,10 @@ pypy3 -m ipykernel install --prefix=$HOME/.local/ --name 'pypy3'
 
 jupyter kernelspec list
 ```
-3. Test running jupyter as ```
+3. Test running jupyter as
+```sh
 jupyter lab
 ```
+Then, Ctrl+Click or copy/paste the link `http://127.0.0.1:9999/lab?token=...`.
+
+You can also try opening the `Tutorial 0 - Test Setup.ipynb` in the ches2022wbc repository, and executing the code cell.
