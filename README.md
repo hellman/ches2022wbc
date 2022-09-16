@@ -22,6 +22,8 @@ sudo docker run -it \
 	hellman1908/ches2022wbc
 ```
 
+Then, Ctrl+Click or copy/paste the link `http://127.0.0.1:9999/lab?token=...`.
+
 Alternatively, a lightweight image (without SageMath) can be installed:
 ```sh
 sudo docker pull hellman1908/ches2022wbc_nosagemath
@@ -45,17 +47,23 @@ sudo docker run -it \
 
 **Recommended:**
 
-1. Install SageMath (only needed for linear algebraic attack)
-2. Install pypy3 (much faster circuit gen. and attacks)
+1. Install [SageMath](https://doc.sagemath.org/html/en/installation/index.html) (only needed for linear algebraic attack)
+2. Install [pypy3](https://www.pypy.org/download.html) (much faster circuit gen. and attacks)
 
 **Required:**
 
-1. Install jupyter lab
+1. Install jupyter lab (any python env.)
 ```sh
 pip install jupyterlab
 ```
-2. Install ipykernel in each interpreter (SageMath, pypy3) until all listed in
+2. Install `ipykernel` for the `pypy3` interpreter, e.g.:
 ```sh
+pypy3 -m pip install -U pip
+pypy3 -m pip install -U pycryptodome binteger ipykernel jupyter_client
+pypy3 -m ipykernel install --prefix=$HOME/.local/ --name 'pypy3'
+
 jupyter kernelspec list
 ```
-
+3. Test running jupyter as ```
+jupyter lab
+```
