@@ -16,14 +16,29 @@ sudo docker pull hellman1908/ches2022wbc
 Then, run as follows:
 ```bash
 git clone https://github.com/hellman/ches2022wbc
-sudo docker run -p 127.0.0.1:9999:9999 -v `pwd`/ches2022wbc`:/home/user/ches2022wbc hellman1908/ches2022wbc
+sudo docker run -it \
+	--network=host \
+	-v `pwd`/ches2022wbc:/home/user/ches2022wbc \
+	hellman1908/ches2022wbc
 ```
 
 Alternatively, a lightweight image (without SageMath) can be installed:
 ```sh
 sudo docker pull hellman1908/ches2022wbc_nosagemath
 git clone https://github.com/hellman/ches2022wbc
-sudo docker run -p 127.0.0.1:9999:9999 -v `pwd`/ches2022wbc`:/home/user/ches2022wbc hellman1908/ches2022wbc_nosagemath
+sudo docker run -it \
+	--network=host \
+	-v `pwd`/ches2022wbc:/home/user/ches2022wbc \
+	hellman1908/ches2022wbc_nosagemath
+```
+
+Note: without host network, try running
+```sh
+sudo docker run -it \
+	-p 127.0.0.1:9999:9999 \
+	-v `pwd`/ches2022wbc:/home/user/ches2022wbc \
+	hellman1908/ches2022wbc_nosagemath \
+	jupyter lab --no-browser --port=9999 --ip=127.0.0.1
 ```
 
 ## Setup (using Linux)
