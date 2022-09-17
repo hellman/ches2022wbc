@@ -39,4 +39,4 @@ RUN pypy3 -m ipykernel install --prefix=/home/user/.local/ --name 'pypy3'
 
 ENV PYTHONPATH="${PYTHONPATH}:/home/user/ches2022wbc/"
 
-CMD jupyter lab --no-browser --port=9999 --ip=127.0.0.1
+CMD (cd ches2022wbc && make) && jupyter lab --no-browser --port=9999 --ip=127.0.0.1

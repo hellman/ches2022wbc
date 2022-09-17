@@ -16,7 +16,6 @@ sudo docker pull hellman1908/ches2022wbc
 Then, run as follows:
 ```bash
 git clone https://github.com/hellman/ches2022wbc
-(cd ches2022wbc && make)
 
 # run Jupyter Notebook
 sudo docker run -it \
@@ -73,6 +72,12 @@ pypy3 -m ipykernel install --prefix=$HOME/.local/ --name 'pypy3'
 
 jupyter kernelspec list
 ```
+3. Clone this repository and compile the fastcircuit library:
+```bash
+git clone https://github.com/hellman/ches2022wbc
+cd ches2022wbc
+make
+````
 3. Test running jupyter as
 ```bash
 jupyter lab

@@ -42,4 +42,4 @@ RUN sage -pip install --no-cache-dir -U pycryptodome binteger ipykernel graphviz
 
 ENV PYTHONPATH="${PYTHONPATH}:/home/user/ches2022wbc/"
 
-CMD jupyter lab --no-browser --port=9999 --ip=127.0.0.1
+CMD (cd ches2022wbc && make) && jupyter lab --no-browser --port=9999 --ip=127.0.0.1
