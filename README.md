@@ -16,6 +16,7 @@ sudo docker pull hellman1908/ches2022wbc
 Then, run as follows:
 ```bash
 git clone https://github.com/hellman/ches2022wbc
+(cd ches2022wbc && make)
 
 # run Jupyter Notebook
 sudo docker run -it \
