@@ -31,14 +31,14 @@ ENV PATH="${PATH}:/home/user/.local/bin"
 # jupyter lab will be install in main python
 # other interpreters only need to install ipykernel
 RUN pip install --no-cache-dir -U pip
-RUN pip install --no-cache-dir -U pycryptodome binteger jupyterlab ipykernel
+RUN pip install --no-cache-dir -U pycryptodome binteger jupyterlab ipykernel graphviz
 
 RUN pypy3 -m pip install --no-cache-dir -U pip
-RUN pypy3 -m pip install --no-cache-dir -U pycryptodome binteger ipykernel jupyter_client
+RUN pypy3 -m pip install --no-cache-dir -U pycryptodome binteger ipykernel jupyter_client graphviz
 RUN pypy3 -m ipykernel install --prefix=/home/user/.local/ --name 'pypy3'
 
 RUN sage -pip install --no-cache-dir -U pip
-RUN sage -pip install --no-cache-dir -U pycryptodome binteger ipykernel
+RUN sage -pip install --no-cache-dir -U pycryptodome binteger ipykernel graphviz
 
 ENV PYTHONPATH="${PYTHONPATH}:/home/user/ches2022wbc/"
 

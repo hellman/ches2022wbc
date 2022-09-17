@@ -10,22 +10,30 @@ The simplest is to use the prepared docker image.
 
 **WARNING**: as the image is quite large (4.5 GiB) due to SageMath, it is recommended to download it in advance:
 
-```sh
+```bash
 sudo docker pull hellman1908/ches2022wbc
-````
+```
 Then, run as follows:
 ```bash
 git clone https://github.com/hellman/ches2022wbc
+
+# run Jupyter Notebook
 sudo docker run -it \
 	--network=host \
 	-v `pwd`/ches2022wbc:/home/user/ches2022wbc \
 	hellman1908/ches2022wbc
+
+# run shell
+sudo docker run -it \
+	--network=host \
+	-v `pwd`/ches2022wbc:/home/user/ches2022wbc \
+	hellman1908/ches2022wbc /bin/bash
 ```
 
 Then, Ctrl+Click or copy/paste the link `http://127.0.0.1:9999/lab?token=...`.
 
 Alternatively, a lightweight image (without SageMath) can be installed:
-```sh
+```bash
 sudo docker pull hellman1908/ches2022wbc_nosagemath
 git clone https://github.com/hellman/ches2022wbc
 sudo docker run -it \
@@ -35,7 +43,7 @@ sudo docker run -it \
 ```
 
 Note: without host network, try running
-```sh
+```bash
 sudo docker run -it \
 	-p 127.0.0.1:9999:9999 \
 	-v `pwd`/ches2022wbc:/home/user/ches2022wbc \
@@ -53,11 +61,11 @@ sudo docker run -it \
 **Required:**
 
 1. Install jupyter lab (any python env.)
-```sh
+```bash
 pip install jupyterlab
 ```
 2. Install `ipykernel` for the `pypy3` interpreter, e.g.:
-```sh
+```bash
 pypy3 -m pip install -U pip
 pypy3 -m pip install -U pycryptodome binteger ipykernel jupyter_client
 pypy3 -m ipykernel install --prefix=$HOME/.local/ --name 'pypy3'
@@ -65,7 +73,7 @@ pypy3 -m ipykernel install --prefix=$HOME/.local/ --name 'pypy3'
 jupyter kernelspec list
 ```
 3. Test running jupyter as
-```sh
+```bash
 jupyter lab
 ```
 Then, Ctrl+Click or copy/paste the link `http://127.0.0.1:9999/lab?token=...`.
