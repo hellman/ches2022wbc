@@ -4,6 +4,9 @@
 
 This repository contains preparation instructions and notebooks for the [WBC tutorial](https://ches.iacr.org/2022/affiliated.php) at CHES 2022.
 
+**Note:** the repository is currently assembled primarily for the tutorial at CHES 2022; a large part of the tutorial should be runnable with just `pip install circkit wboxkit` and the jupyter lab / notebook. However, some parts (e.g. wboxkit.fastcircuit compilation) are not yet automatically built when installing from pip (will be fixed soon).
+
+
 ## Setup (using Docker)
 
 The simplest is to use the prepared docker image.
