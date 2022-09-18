@@ -7,6 +7,32 @@ This repository contains preparation instructions and notebooks for the [WBC tut
 **Note:** the repository is currently assembled primarily for the tutorial at CHES 2022; a large part of the tutorial should be runnable with just `pip install circkit wboxkit` and the jupyter lab / notebook. However, some parts (e.g. wboxkit.fastcircuit compilation) are not yet automatically built when installing from pip (will be fixed soon).
 
 The main repository for `circkit` is: [github.com/cryptoexperts/circkit](https://github.com/cryptoexperts/circkit)
+The tutorial was prepared using a local copy of `circkit` in this repository, but `pip install circkit` should also work.
+
+
+## Minimal Setup (pure Python)
+
+Might be slow and LDA won't work.
+
+```bash
+sudo apt install graphviz
+
+pip install jupyterlab binteger pycryptodome graphviz
+```
+
+Running notebooks:
+
+```sh
+jupyter lab
+```
+
+Running tools/attacks:
+
+```sh
+python3 tools/trace.py ...
+python3 attacks/analyze_exact.py ....
+```
+
 
 ## Setup (using Docker)
 
@@ -54,6 +80,7 @@ sudo docker run -it \
 	hellman1908/ches2022wbc_nosagemath \
 	jupyter lab --no-browser --port=9999 --ip=127.0.0.1
 ```
+
 
 ## Setup (using Linux)
 
