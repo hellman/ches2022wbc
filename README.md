@@ -6,6 +6,7 @@ This repository contains preparation instructions and notebooks for the [WBC tut
 
 **Note:** the repository is currently assembled primarily for the tutorial at CHES 2022; a large part of the tutorial should be runnable with just `pip install circkit wboxkit` and the jupyter lab / notebook. However, some parts (e.g. wboxkit.fastcircuit compilation) are not yet automatically built when installing from pip (will be fixed soon).
 
+The main repository for `circkit` is: [github.com/cryptoexperts/circkit](https://github.com/cryptoexperts/circkit)
 
 ## Setup (using Docker)
 
