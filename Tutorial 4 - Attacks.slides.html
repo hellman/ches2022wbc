@@ -14904,7 +14904,7 @@ Example: <span class="m">61626364656667684142434445464748</span>
 
 <span class="c1"># combine separate trace files into a single one</span>
 <span class="c1"># and create a sample config</span>
-$ pypy3 attacks/combine4daredevil.py tutorials/traces/aes2_minq/ -T <span class="m">500</span>
+$ pypy3 attacks/combine4daredevil.py tutorials/traces/aes2_minq/ -T <span class="m">256</span>
 $ cat daredevil.config 
 
 <span class="o">[</span>Traces<span class="o">]</span>
@@ -14990,8 +14990,8 @@ $$V = \pmatrix{v_1 &amp;|&amp; v_2 &amp;|&amp; v_3 &amp;|&amp; \ldots &amp;|&amp
 <p>The aim of LDA is to find any amount of intermediate functions that <strong>sum</strong> (XOR) to a given gussed function. This amounts to simply solving the matrix equation
 $$V \times z = \pmatrix{s_k(x_1)\\s_k(x_2)\\\vdots\\s_k(x_T)\\}$$</p>
 <p>(This has to be done for every guessed function $s_k$, but this can be batched by a precomputation on the matrix $V$)</p>
-<p><strong>Important</strong>: it requires a number of traces $T \ge N + \varepsilon$ for a small integer $\varepsilon$ to avoid false-positives.</p>
-<p>On practice, considering a sliding window of $w$ functions $V = \pmatrix{v_i &amp;|&amp; \ldots &amp;|&amp; v_{i+w-1}}$$$.</p>
+<p><strong>Important</strong>: it requires a number of traces $T \ge N + \varepsilon$ for a small integer $\varepsilon$ to avoid false-positives.
+On practice, considering a sliding window of $w$ functions $V = \pmatrix{v_i &amp;|&amp; \ldots &amp;|&amp; v_{i+w-1}}$.</p>
 
 </div>
 </div>
