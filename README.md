@@ -29,6 +29,7 @@ jupyter lab
 Running tools/attacks:
 
 ```sh
+export PYTHONPATH=.:$PYTHONPATH
 python3 tools/trace.py ...
 python3 attacks/analyze_exact.py ....
 ```
