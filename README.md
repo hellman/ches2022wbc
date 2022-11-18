@@ -4,6 +4,12 @@
 
 This repository contains preparation instructions and notebooks for the [WBC tutorial](https://ches.iacr.org/2022/affiliated.php) at CHES 2022.
 
+---
+
+**Warning**: this is an archive repository and is outdated. See [wboxkit repo](https://github.com/hellman/wboxkit) for updated library and tutorials.
+
+---
+
 **Note:** the repository is currently assembled primarily for the tutorial at CHES 2022; a large part of the tutorial should be runnable with just `pip install circkit wboxkit` and the jupyter lab / notebook. However, some parts (e.g. wboxkit.fastcircuit compilation) are not yet automatically built when installing from pip (will be fixed soon).
 
 The main repository for `circkit` is: [github.com/cryptoexperts/circkit](https://github.com/cryptoexperts/circkit)
